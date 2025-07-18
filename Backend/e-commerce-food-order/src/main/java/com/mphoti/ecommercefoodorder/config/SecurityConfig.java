@@ -31,16 +31,11 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() {
-        return new CustomUserDetailsService();
-    }
-
-    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/customers/signup",
+                        .antMatchers("/api/customers/signup",
                                 "/api/customers/login",
                                 "/api/customers",
                                 "/api/orders/place",

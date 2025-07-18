@@ -13,7 +13,7 @@ import com.mphoti.ecommercefoodorder.repository.CustomerRepository;
 import com.mphoti.ecommercefoodorder.repository.OrderRepository;
 import com.mphoti.ecommercefoodorder.repository.PaymentRepository;
 
-import jakarta.persistence.EntityNotFoundException;
+import javax.persistence.EntityNotFoundException;
 
 @Service
 public class OrderService {
